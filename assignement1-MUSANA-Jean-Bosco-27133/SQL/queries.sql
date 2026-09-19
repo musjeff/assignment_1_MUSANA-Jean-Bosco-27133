@@ -1,12 +1,5 @@
--- =====================================================
--- SUNRISE SUPERMARKET - ASSIGNMENT ONE
--- DBMS: ORACLE DATABASE
--- =====================================================
 
-
--- =====================================================
 -- QUERY 1: INNER JOIN CUSTOMERS AND ORDERS
--- =====================================================
 
 SELECT
     o.order_id,
@@ -19,9 +12,8 @@ INNER JOIN customers c
 ORDER BY o.order_date;
 
 
--- =====================================================
 -- QUERY 2: INNER JOIN ORDER ITEMS AND PRODUCTS
--- =====================================================
+
 
 SELECT
     oi.order_item_id,
@@ -36,9 +28,8 @@ INNER JOIN products p
 ORDER BY oi.order_id;
 
 
--- =====================================================
 -- QUERY 3: LEFT JOIN CUSTOMERS AND ORDERS
--- =====================================================
+
 
 SELECT
     c.customer_id,
@@ -51,9 +42,8 @@ LEFT JOIN orders o
 ORDER BY c.customer_id, o.order_date;
 
 
--- =====================================================
 -- QUERY 4: CTE - CUSTOMERS ABOVE AVERAGE SPENDING
--- =====================================================
+
 
 WITH customer_totals AS (
     SELECT
@@ -81,9 +71,8 @@ WHERE total_spend > (
 ORDER BY total_spend DESC;
 
 
--- =====================================================
 -- QUERY 5: WINDOW FUNCTION - CUSTOMER SPENDING RANK
--- =====================================================
+
 
 WITH customer_totals AS (
     SELECT
@@ -108,9 +97,7 @@ FROM customer_totals
 ORDER BY spending_rank;
 
 
--- =====================================================
 -- QUERY 6: WINDOW FUNCTION - NUMBER CUSTOMER ORDERS
--- =====================================================
 
 SELECT
     o.customer_id,
@@ -127,9 +114,7 @@ JOIN customers c
 ORDER BY o.customer_id, o.order_date;
 
 
--- =====================================================
 -- QUERY 7: WINDOW FUNCTION - RUNNING REVENUE
--- =====================================================
 
 WITH order_revenue AS (
     SELECT
@@ -155,9 +140,9 @@ FROM order_revenue
 ORDER BY order_date, order_id;
 
 
--- =====================================================
+
 -- QUERY 8: WINDOW FUNCTION - DAYS BETWEEN ORDERS
--- =====================================================
+
 
 WITH customer_orders AS (
     SELECT
