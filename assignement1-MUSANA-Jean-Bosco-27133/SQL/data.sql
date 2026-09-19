@@ -1,13 +1,4 @@
--- =====================================================
--- SUNRISE SUPERMARKET
--- DATA INSERTION
--- DBMS: ORACLE DATABASE
--- =====================================================
 
-
--- =====================================================
--- 1. INSERT CUSTOMERS
--- =====================================================
 
 INSERT INTO customers
 (customer_id, customer_name, email, city)
@@ -40,9 +31,8 @@ VALUES
 (6, 'Grace Ingabire', 'grace@gmail.com', 'Kigali');
 
 
--- =====================================================
+
 -- 2. INSERT PRODUCTS
--- =====================================================
 
 INSERT INTO products
 (product_id, product_name, category, price)
@@ -95,9 +85,9 @@ VALUES
 (10, 'Flour', 'Grains', 2200);
 
 
--- =====================================================
+
 -- 3. INSERT ORDERS
--- =====================================================
+
 
 INSERT INTO orders
 (order_id, customer_id, order_date)
@@ -370,8 +360,7 @@ VALUES
 (35, 118, 2, 4);
 
 
--- =====================================================
 -- SAVE ALL INSERTED DATA
--- =====================================================
+
 
 COMMIT;
