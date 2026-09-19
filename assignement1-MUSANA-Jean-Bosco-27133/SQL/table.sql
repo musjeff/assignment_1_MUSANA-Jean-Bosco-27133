@@ -1,13 +1,6 @@
--- =====================================================
--- SUNRISE SUPERMARKET
--- TABLE CREATION
--- DBMS: ORACLE DATABASE
--- =====================================================
 
-
--- =====================================================
 -- 1. CUSTOMERS TABLE
--- =====================================================
+
 
 CREATE TABLE customers (
     customer_id NUMBER PRIMARY KEY,
@@ -17,9 +10,9 @@ CREATE TABLE customers (
 );
 
 
--- =====================================================
+
 -- 2. PRODUCTS TABLE
--- =====================================================
+
 
 CREATE TABLE products (
     product_id NUMBER PRIMARY KEY,
@@ -29,9 +22,9 @@ CREATE TABLE products (
 );
 
 
--- =====================================================
+
 -- 3. ORDERS TABLE
--- =====================================================
+
 
 CREATE TABLE orders (
     order_id NUMBER PRIMARY KEY,
@@ -40,9 +33,8 @@ CREATE TABLE orders (
 );
 
 
--- =====================================================
 -- 4. ORDER ITEMS TABLE
--- =====================================================
+
 
 CREATE TABLE order_items (
     order_item_id NUMBER PRIMARY KEY,
